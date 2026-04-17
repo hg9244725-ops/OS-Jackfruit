@@ -86,7 +86,8 @@ sudo ./engine stop gamma
 
 1. Multi-container Supervision
 
-<img width="423" height="148" alt="Screenshot 2026-04-16 223048" src="https://github.com/user-attachments/assets/f6c892c1-8eb0-4e72-b472-016f398cab04" />
+<img src="./images/demo.png" alt="Multi-container supervision" width="423" />
+
 
 
 
