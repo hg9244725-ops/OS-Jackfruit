@@ -82,7 +82,8 @@ sudo ./engine start gamma ./rootfs "/bin/sh -c 'echo Gamma running && sleep 40'"
 # Stop a container
 sudo ./engine stop gamma
 
-Section 3: Demo Screenshots
+### Section 3: Demo Screenshots
+
 1. Multi-container Supervision
 
 <img width="423" height="148" alt="Screenshot 2026-04-16 223048" src="https://github.com/user-attachments/assets/f6c892c1-8eb0-4e72-b472-016f398cab04" />
