@@ -50,46 +50,6 @@ tar -xzf alpine-minirootfs-3.20.3-x86_64.tar.gz -C rootfs-base
 # Make one writable copy per container you plan to run
 cp -a ./rootfs-base ./rootfs-alpha
 cp -a ./rootfs-base ./rootfs-beta
-Step 4: Run the System (Requires 2 Terminals)
-
-In Terminal 1 - Start the Supervisor:
-
-# From the boilerplate/ directory
-
-# Load the kernel module in terminal 1
-sudo insmod monitor.ko
-
-# Start the supervisor process
-sudo ./engine supervisor ./rootfs
-In Terminal 2 - Run Client Commands:
-
-# From the boilerplate/ directory
-
-# Start a container
-sudo ./engine start alpha ./rootfs "sleep 30"
-sudo ./engine start beta ./rootfs "sleep 30"
-
-# List containers
-sudo ./engine ps
-
-# Check logs
-sudo ./engine start alpha ./rootfs "/bin/sh -c 'echo Alpha is running... && sleep 5'"
-sudo ./engine start gamma ./rootfs "/bin/sh -c 'echo Gamma running && sleep 40'"
-
-# Starting one more container gamma
-sudo ./engine start gamma ./rootfs "/bin/sh -c 'echo Gamma running && sleep 40'"
-
-# Stop a container
-sudo ./engine stop gamma
-
-### Section 3: Demo Screenshots
-
-1. Multi-container Supervision
-
-<img width="423" height="148" alt="Screenshot 2026-04-16 223048" src="https://github.com/user-attachments/assets/152e93ec-7e7c-4918-a2db-4c52753df74e" />
-
-
-
 ```
 
 Do not commit `rootfs-base/` or `rootfs-*` directories to your repository.
@@ -135,17 +95,12 @@ The CI-safe build command is:
 ```bash
 make -C boilerplate ci
 ```
-
-This smoke check does not test kernel-module loading, supervisor runtime behavior, or container execution.
-
+---------------------------------------------------------------------------------
 ---
 
-## What to Do Next
+# **Operating Systems - Jackfruit**
+*OUTPUT SCREENSHOTS*
 
-Read [`project-guide.md`](project-guide.md) end to end. It contains:
+<img width="423" height="148" alt="Screenshot 2026-04-16 223048" src="https://github.com/user-attachments/assets/83ff88dc-9320-4f91-8c21-ae30476d20b0" />
 
-- The six implementation tasks (multi-container runtime, CLI, logging, kernel monitor, scheduling experiments, cleanup)
-- The engineering analysis you must write
-- The exact submission requirements, including what your `README.md` must contain (screenshots, analysis, design decisions)
 
-Your fork's `README.md` should be replaced with your own project documentation as described in the submission package section of the project guide. (As in get rid of all the above content and replace with your README.md)
