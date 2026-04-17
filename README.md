@@ -50,6 +50,43 @@ tar -xzf alpine-minirootfs-3.20.3-x86_64.tar.gz -C rootfs-base
 # Make one writable copy per container you plan to run
 cp -a ./rootfs-base ./rootfs-alpha
 cp -a ./rootfs-base ./rootfs-beta
+Step 4: Run the System (Requires 2 Terminals)
+
+In Terminal 1 - Start the Supervisor:
+
+# From the boilerplate/ directory
+
+# Load the kernel module in terminal 1
+sudo insmod monitor.ko
+
+# Start the supervisor process
+sudo ./engine supervisor ./rootfs
+In Terminal 2 - Run Client Commands:
+
+# From the boilerplate/ directory
+
+# Start a container
+sudo ./engine start alpha ./rootfs "sleep 30"
+sudo ./engine start beta ./rootfs "sleep 30"
+
+# List containers
+sudo ./engine ps
+
+# Check logs
+sudo ./engine start alpha ./rootfs "/bin/sh -c 'echo Alpha is running... && sleep 5'"
+sudo ./engine start gamma ./rootfs "/bin/sh -c 'echo Gamma running && sleep 40'"
+
+# Starting one more container gamma
+sudo ./engine start gamma ./rootfs "/bin/sh -c 'echo Gamma running && sleep 40'"
+
+# Stop a container
+sudo ./engine stop gamma
+Section 3: Demo Screenshots
+1. Multi-container Supervision
+<img width="423" height="148" alt="Screenshot 2026-04-16 223048" src="https://github.com/user-attachments/assets/f6c892c1-8eb0-4e72-b472-016f398cab04" />
+
+
+
 ```
 
 Do not commit `rootfs-base/` or `rootfs-*` directories to your repository.
