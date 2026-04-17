@@ -103,19 +103,63 @@ make -C boilerplate ci
 
 ---------------------------------------------------------------------------------
 ***Screenshot 1***
-<img width="423" height="148" alt="Screenshot 2026-04-16 223048" src="https://github.com/user-attachments/assets/55b3b042-5040-4149-8ea9-d230f86c0697" />
+1Multi-container Supervision
+<img width="897" height="250" alt="Screenshot 2026-04-17 143004" src="https://github.com/user-attachments/assets/67981880-3a8e-4c7c-8fa2-d2cd4223ace2" />
+
 
 ---------------------------------------------------------------------------------
 ***Screenshot 2***
-<img width="495" height="342" alt="Screenshot 2026-04-16 223118" src="https://github.com/user-attachments/assets/d7f53ea0-c547-48d3-b10c-72c096012107" />
+Metadata Tracking
+<img width="908" height="255" alt="Screenshot 2026-04-17 143018" src="https://github.com/user-attachments/assets/20aa3b3a-13e6-4d16-9d36-74b41c4238a4" />
+
 
 ---------------------------------------------------------------------------------
 ***Screenshot 3***
+3. Bounded-Buffer Logging
+
+<img width="904" height="711" alt="Screenshot 2026-04-17 143100" src="https://github.com/user-attachments/assets/5a6e2046-3c06-4619-9d2c-70bd606cf027" />
+
 
 ---------------------------------------------------------------------------------
 ***Screenshot 4***
+4. CLI and IPC
+<img width="905" height="155" alt="Screenshot 2026-04-17 143222" src="https://github.com/user-attachments/assets/b3c3b08e-2831-451c-ac48-1637f2970ddd" />
+
 
 ---------------------------------------------------------------------------------
 ***Screenshot 5***
+Soft-Limit Warning
+<img width="894" height="244" alt="image" src="https://github.com/user-attachments/assets/814e4bf5-07b8-4956-b7fd-f64b7a1169a5" />
+
+
 
 ---------------------------------------------------------------------------------
+***Screenshot 6***
+6. Hard-Limit Kill
+<img width="890" height="496" alt="Screenshot 2026-04-17 143428" src="https://github.com/user-attachments/assets/64a1b11b-e56d-424d-9c2e-cf097a01aa13" />
+
+
+---------------------------------------------------------------------------------
+***Screenshot 7***
+Scheduling experiment (cpu-high log)
+<img width="1141" height="661" alt="Screenshot 2026-04-17 143817" src="https://github.com/user-attachments/assets/c3c8113b-d833-4f2b-a06a-6517620e1039" />
+
+
+---------------------------------------------------------------------------------
+***Screenshot 8***
+Scheduling experiment (cpu-low log)
+<img width="1086" height="673" alt="Screenshot 2026-04-17 143858" src="https://github.com/user-attachments/assets/7b405acc-f254-43f8-8d13-07cfaeb5b90e" />
+
+
+
+
+---------------------------------------------------------------------------------
+***Screenshot 9***
+Clean teardown
+<img width="1242" height="512" alt="Screenshot 2026-04-17 144325" src="https://github.com/user-attachments/assets/4b81940d-9ac1-435c-bcf1-5234b520354e" />
+
+
+
+
+---------------------------------------------------------------------------------
+
